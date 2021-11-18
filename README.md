@@ -1,4 +1,5 @@
-## 使用mybatis-plus插件实现代码自动生成
+## 代码自动生成
+* 基于mybatis-plus代码生成器插件 3.5.3+
 #### pom.xml 配置插件
 
 ```xml
