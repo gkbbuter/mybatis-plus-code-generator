@@ -39,4 +39,20 @@ public class CodeGeneratorStructDto {
     private boolean disControllerTemp;
     // 设置mapperXml生成路径
     private String mapperXmlPath;
+    // 转换 service 接口文件名称
+    private String convertServiceFileName;
+    // 转换 service 实现类文件名称
+    private String convertServiceImplFileName;
+    // 转换 mapper 类文件名称
+    private String convertMapperFileName;
+    // 转换 xml 文件名称
+    private String convertXmlFileName;
+    // Entity 包名
+    private String packageEntity;
+    // Service 包名
+    private String packageService;
+    // Service Impl 包名
+    private String packageServiceImpl;
+    // Mapper 包名
+    private String packageMapper;
 }

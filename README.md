@@ -41,5 +41,13 @@ fileOverride: true #文件覆盖，默认true
 enableLombok: false #启用lombok模式，默认false
 disControllerTemp: false  #禁用controller模板，默认false
 mapperXmlPath: xxx/xx/xx #默认target/generated-sources/mybatis-plus-generator/mapper
+convertServiceFileName: Pre #转换 service 接口文件名称  Pre + xxxxService
+convertServiceImplFileName: Pre # 转换 service 实现类文件名称 Pre + xxxxServiceImpl
+convertMapperFileName: Pre # 转换 mapper 类文件名称 Pre + xxxxMapper
+convertXmlFileName: Pre # 转换 xml 文件名称 Pre + xxxxMapper.xml
+packageEntity: model # Entity 包名
+packageMapper: dao # Mapper 包名
+packageService:  service # Service 包名
+packageServiceImpl: serviceImpl # Service Impl 包名
 ```
 

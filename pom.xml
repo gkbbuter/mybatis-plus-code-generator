@@ -4,7 +4,7 @@
   <groupId>cn.com.bbut.maven.plugin</groupId>
   <artifactId>mybatis-plus-generator</artifactId>
   <packaging>maven-plugin</packaging>
-  <version>1.0</version>
+  <version>1.0.4</version>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -14,7 +14,13 @@
     <mysql.version>8.0.12</mysql.version>
   </properties>
   <name>generator Maven Mojo</name>
+  <!--<url>http://maven.apache.org</url>-->
   <dependencies>
+    <!--<dependency>-->
+      <!--<groupId>org.apache.maven.plugins</groupId>-->
+      <!--<artifactId>maven-plugin-plugin</artifactId>-->
+      <!--<version>3.2</version>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>org.apache.maven</groupId>
       <artifactId>maven-plugin-api</artifactId>
@@ -110,25 +116,32 @@
         </configuration>
       </plugin>
       <plugin>
-          <artifactId>maven-plugin-plugin</artifactId>
-          <version>3.6.0</version>
-          <executions>
-            <execution>
-              <id>default-addPluginArtifactMetadata</id>
-              <phase>package</phase>
-              <goals>
-                <goal>addPluginArtifactMetadata</goal>
-              </goals>
-            </execution>
-            <execution>
-              <id>default-descriptor</id>
-              <phase>process-classes</phase>
-              <goals>
-                <goal>descriptor</goal>
-              </goals>
-            </execution>
-          </executions>
+      <artifactId>maven-plugin-plugin</artifactId>
+      <version>3.6.0</version>
+      <executions>
+        <execution>
+          <id>default-addPluginArtifactMetadata</id>
+          <phase>package</phase>
+          <goals>
+            <goal>addPluginArtifactMetadata</goal>
+          </goals>
+        </execution>
+        <execution>
+          <id>default-descriptor</id>
+          <phase>process-classes</phase>
+          <goals>
+            <goal>descriptor</goal>
+          </goals>
+        </execution>
+      </executions>
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+    <repository>
+      <id>devServer</id>
+      <name>local-releases</name>
+      <url>http://server.nexus:8081/repository/maven-releases/</url>
+    </repository>
+  </distributionManagement>
 </project>
